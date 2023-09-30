@@ -7,6 +7,9 @@
   "files.autoSave": "off", // optional but recommended
   "vs-code-prettier-eslint.prettierLast": false,
   "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   } // set as "true" to run 'prettier' last not first
 }
