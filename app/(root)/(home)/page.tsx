@@ -1,6 +1,4 @@
 import AuthForm from "@/components/Auth/Forms/AuthForm";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import UserSidebarCard from "@/components/ui/UserSidebarCard";
 import Link from "next/link";
 
 const page = () => {
@@ -30,36 +28,6 @@ const page = () => {
         </div>
       </div>
     </div>
-    /* <div className="flex flex-row h-screen">
-      <div className="flex flex-col w-max"></div>
-      <ScrollArea className="text-white max-h-full w-[350px] rounded-md border">
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-        <UserSidebarCard />
-      </ScrollArea>
-    </div> */
   );
 };
 
