@@ -1,4 +1,4 @@
-import AuthForm from "@/components/Auth/AuthForm";
+import AuthForm from "@/components/Auth/Forms/AuthForm";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import UserSidebarCard from "@/components/ui/UserSidebarCard";
 import Link from "next/link";
