@@ -90,7 +90,7 @@ const AuthForm = () => {
     if (authVariant === "register") {
       await axios
         .post("/api/register", data)
-        .then(async (res) => {
+        .then(async () => {
           toast({
             title: "Success!",
             description: "You have successfully registered, logging you in...",
