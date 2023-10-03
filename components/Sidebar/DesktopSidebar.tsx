@@ -5,7 +5,7 @@ import { useState } from "react";
 import SidebarItem from "./SidebarItem";
 import { User } from "@prisma/client";
 import PropTypes from "prop-types";
-import CustomSidebarAvatar from "./CustomSidebarAvatar";
+import CustomAvatar from "../Shared/CustomAvatar";
 
 interface DesktopSidebarProps {
   currentUser: User;
@@ -16,10 +16,10 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({ currentUser }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="flex mt-2 justify-start flex-col min-h-screen w-16 text-white">
-      <ul role="list" className="flex flex-col items-center space-y-5">
+    <div className="flex justify-start flex-col min-h-screen w-16 text-white">
+      <ul role="list" className="flex mt-2 flex-col items-center space-y-5">
         <div onClick={() => setIsOpen(!isOpen)}>
-          <CustomSidebarAvatar currentUser={currentUser} />
+          <CustomAvatar currentUser={currentUser} />
         </div>
         {routes.map((route) => (
           <SidebarItem

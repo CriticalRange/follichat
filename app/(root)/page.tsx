@@ -1,7 +1,8 @@
 import AuthForm from "@/components/Auth/Forms/AuthForm";
+import { NextPage } from "next";
 import Link from "next/link";
 
-const page = () => {
+const page: NextPage = () => {
   return (
     <div className="flex flex-center items-center flex-col h-screen gap-4 text-white">
       <h1 className="text-5xl">Welcome back to Folli Chat!</h1>
