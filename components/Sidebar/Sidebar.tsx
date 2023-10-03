@@ -1,30 +1,14 @@
-"use client";
+import DesktopSidebar from "./DesktopSidebar";
+import getCurrentUser from "@/app/actions/getCurrentUser";
 
-import useRoutes from "@/app/hooks/useRoutes";
-import { useState } from "react";
-import SidebarItem from "./SidebarItem";
-
-const Sidebar = () => {
-  // States
-  const routes = useRoutes();
-  const [isOpen, setOpen] = useState<boolean>(false);
+async function Sidebar() {
+  const currentUser = await getCurrentUser();
 
   return (
-    <div className="flex mt-2 justify-start flex-col min-h-screen w-16 text-white">
-      <ul role="list" className="flex flex-col items-center space-y-5">
-        {routes.map((route) => (
-          <SidebarItem
-            key={route.label}
-            href={route.href}
-            label={route.label}
-            active={route.active}
-            onClick={route.onClick}
-            icon={route.icon}
-          />
-        ))}
-      </ul>
+    <div className="h-full">
+      <DesktopSidebar currentUser={currentUser!} />
     </div>
   );
-};
+}
 
 export default Sidebar;

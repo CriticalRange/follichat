@@ -21,11 +21,12 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
     "indent": ["warn", 2],
     "linebreak-style": ["warn", "windows"],
     "no-unused-vars": ["warn"],
-    "react/prop-types": ["ignore"],
+    "react/prop-types": ["off"],
     "quotes": ["warn", "double"],
     "semi": ["error", "always"],
     "arrow-parens": ["warn", "always"]

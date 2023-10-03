@@ -1,17 +1,23 @@
 /** @type {import('next').NextConfig} */
 
-const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
-
-const nextConfig = {};
-
-module.exports = withPlugins([
-  [
-    optimizedImages,
-    {
-      /* config for next-optimized-images */
-    },
-  ],
-
-  // your other plugins here
-]);
+module.exports = {
+  experimental: {
+    swcPlugins: [["next-superjson-plugin", {}]],
+  },
+  images: {
+    domains: [
+      "res.cloudinary.com",
+      "lh3.googleusercontent.com",
+      "avatars.githubusercontent.com",
+    ],
+  },
+  webpack: (config) => {
+    config.resolve.fallback = {
+      fs: false,
+      path: false,
+      stream: false,
+      constants: false,
+    };
+    return config;
+  },
+};
