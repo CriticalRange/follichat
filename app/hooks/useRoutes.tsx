@@ -13,16 +13,16 @@ const useRoutes = () => {
   const routes = useMemo(
     () => [
       {
-        label: "Chat",
-        href: "/conversations",
-        active: pathname === "/conversations" || !!conversationId,
-        icon: CustomChatIcon,
-      },
-      {
         label: "Users",
         href: "/users",
         active: pathname === "/users",
         icon: CustomUsersIcon,
+      },
+      {
+        label: "Chat",
+        href: "/conversations",
+        active: pathname === "/conversations" || !!conversationId,
+        icon: CustomChatIcon,
       },
       {
         label: "Sign Out",

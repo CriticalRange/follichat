@@ -37,9 +37,12 @@ const UserSidebarCard: React.FC<UserSidebarCardProps> = ({ userData }) => {
       });
   }, []);
   return (
-    <Card onClick={handleClick} className="cursor-pointer max-h-20">
+    <Card
+      onClick={handleClick}
+      className="cursor-pointer border-transparent max-h-20"
+    >
       <CardHeader>
-        <div className="flex flex-row items-center justify-start">
+        <div className="flex flex-row h-fit items-center justify-start">
           <CustomAvatar currentUser={userData} />
           <CardDescription className="ml-3">{userData.name}</CardDescription>
         </div>

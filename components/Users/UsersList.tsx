@@ -9,12 +9,12 @@ interface UsersListProps {
 
 const UsersList: React.FC<UsersListProps> = ({ items }) => {
   return (
-    <div className="flex flex-row h-screen">
-      <ScrollArea className="text-white max-h-full w-[350px] rounded-md border border-grey">
+    <div className="flex flex-row">
+      <div className="text-white rounded-md">
         {items.map((user) => (
           <UserSidebarCard key={user.id} userData={user} />
         ))}
-      </ScrollArea>
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ async function Sidebar() {
   const currentUser = await getCurrentUser();
 
   return (
-    <div className="h-full">
+    <div>
       <DesktopSidebar currentUser={currentUser!} />
     </div>
   );
