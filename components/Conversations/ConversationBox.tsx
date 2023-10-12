@@ -63,7 +63,10 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
   }, [lastMessage]);
 
   return (
-    <div className="flex flex-row h-full my-2 ml-2 cursor-pointer">
+    <div
+      className="flex flex-row h-full my-2 ml-2 cursor-pointer"
+      onClick={handleClick}
+    >
       <CustomAvatar currentUser={otherUser} />
       <div className="flex flex-col">
         <div className="flex flex-row">

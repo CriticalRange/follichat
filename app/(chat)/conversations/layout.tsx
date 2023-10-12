@@ -9,7 +9,7 @@ const ConversationsLayout = async ({
   const conversations = await getConversations();
 
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row w-full">
       <div className="flex flex-col">
         <div className="text-white text-4xl my-2 font-bold">Messages</div>
         <ConversationsList initialItems={conversations} />
