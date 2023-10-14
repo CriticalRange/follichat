@@ -64,29 +64,31 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
 
   return (
     <div
-      className="flex flex-row h-full my-2 ml-2 cursor-pointer"
+      className="flex flex-col h-full w-full py-2 pl-2 cursor-pointer"
       onClick={handleClick}
     >
-      <CustomAvatar currentUser={otherUser} />
-      <div className="flex flex-col">
-        <div className="flex flex-row">
-          <h1 className="text-white text-md ml-2">
-            {data?.name || otherUser?.name}
-          </h1>
-          {lastMessage?.createdAt && (
-            <p className="text-white text-sm">
-              {moment(lastMessage?.createdAt).format("LT")}
-            </p>
-          )}
+      <div className="flex flex-row">
+        <CustomAvatar currentUser={otherUser} />
+        <div className="flex flex-col">
+          <div className="flex flex-row">
+            <h1 className="text-white text-md ml-2 w-32 truncate">
+              {data?.name || otherUser?.name}
+            </h1>
+          </div>
+          <p
+            className={clsx(
+              "text-white ml-2 truncate",
+              hasSeen ? "text-gray-500" : "text-white font-semibold"
+            )}
+          >
+            {lastMessageText}
+          </p>
         </div>
-        <p
-          className={clsx(
-            "text-white ml-2",
-            hasSeen ? "text-gray-500" : "text-white font-medium"
-          )}
-        >
-          {lastMessageText}
-        </p>
+        {lastMessage?.createdAt && (
+          <p className="flex text-white text-sm justify-end flex-1">
+            {moment(lastMessage?.createdAt).format("LT")}
+          </p>
+        )}
       </div>
     </div>
   );

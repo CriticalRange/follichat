@@ -20,7 +20,7 @@ const ConversationsList: React.FC<ConversationsLayoutProps> = ({
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex flex-col h-fit my-1 border-l-2">
+      <div className="flex flex-col h-fit my-1 border-gray-500 border-l-2">
         {items.map((item) => (
           <ConversationBox
             key={item.id}
