@@ -1,6 +1,6 @@
 import getConversationById from "@/app/actions/getConversationById";
 import getMessages from "@/app/actions/getMessages";
-import ConversationBody from "@/components/Conversations/ConversationBody";
+import ConversationBody from "@/components/Conversations/ConversationBody/ConversationBody";
 import ConversationForm from "@/components/Conversations/ConversationForm";
 import ConversationHeader from "@/components/Conversations/ConversationHeader";
 
@@ -19,7 +19,7 @@ const conversationId = async ({ params }: { params: IParams }) => {
   return (
     <div className="flex flex-col h-full w-full ml-2">
       <ConversationHeader conversation={conversation} />
-      <ConversationBody />
+      <ConversationBody initialMessages={messages} />
       <ConversationForm />
     </div>
   );
